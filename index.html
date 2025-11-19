@@ -2,17 +2,37 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <title>Boutique</title>
     <link rel="stylesheet" href="Style/style.css">
-    <title>Catalogue Produits</title>
 </head>
 <body>
 
-<h1>Catalogue Produits</h1>
+<header>
+    <h1>Boutique</h1>
+
+    <div class="controls">
+        <input id="searchInput" placeholder="Rechercher un produit...">
+        <select id="categoryFilter"></select>
+
+        <select id="sortSelect">
+            <option value="">Trier...</option>
+            <option value="price-asc">Prix croissant</option>
+            <option value="price-desc">Prix décroissant</option>
+            <option value="az">Nom A → Z</option>
+            <option value="za">Nom Z → A</option>
+        </select>
+
+        <a href="cart.html" class="cartBtn">🛒 Panier</a>
+    </div>
+</header>
 
 <div id="products" class="grid"></div>
 
-<div id="productDetail" class="modal hidden"></div>
-<script src="app.js"></script>
+<!-- MODAL -->
+<div id="productDetail" class="modal hidden">
+    <div class="modal-content" id="modalContent"></div>
+</div>
 
+<script src="app.js"></script>
 </body>
 </html>
